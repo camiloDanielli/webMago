@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de la Orden Arcana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .secret-link {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .secret-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bienvenido al Portal de la Orden Arcana</h2>
+        <div class="login-form">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button onclick="login()">Iniciar Sesión</button>
+        </div>
+        <div class="secret-container" id="secret-container">
+            <p>¡Has descubierto un secreto oculto!</p>
+            <p>Revelación del día: <span id="secret-text">Texto secreto</span></p>
+        </div>
+        <a href="#" class="secret-link" onclick="toggleSecrets()">¿Qué secretos se ocultan aquí?</a>
+    </div>
+
+    <script>
+        function login() {
+            // Aquí puedes agregar lógica de autenticación si lo necesitas
+            alert('¡Bienvenido, mago!');
+        }
+
+        function toggleSecrets() {
+            var secretContainer = document.getElementById('secret-container');
+            secretContainer.style.display = secretContainer.style.display === 'none' ? 'block' : 'none';
+
+            // Puedes personalizar los secretos aquí
+            var secretText = document.getElementById('secret-text');
+            secretText.textContent = 'Texto secreto personalizado';
+        }
+    </script>
+</body>
+</html>
