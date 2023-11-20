@@ -7,17 +7,19 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .login-container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -101,7 +103,7 @@
 
     <script>
         function login() {
-            // Aquí puedes agregar lógica de autenticación si lo necesitas
+            // Agregar lógica de autenticación si es necesario
             alert('¡Bienvenido a Chancelor.SA!');
         }
 
@@ -109,7 +111,7 @@
             var secretContainer = document.getElementById('secret-container');
             secretContainer.style.display = secretContainer.style.display === 'none' ? 'block' : 'none';
 
-            // Puedes personalizar los secretos aquí
+            // Personalizar los secretos aquí
             var secretText = document.getElementById('secret-text');
             secretText.textContent = 'Texto secreto personalizado';
         }
